@@ -140,6 +140,36 @@ Defined in [/circuit/quantumcircuit.py](https://github.com/Qiskit/qiskit-terra/b
 
 ## 3. Implement BasicAer: Python-based Simulators --- 3%
 ### Use the available simulators
+```
+from qiskit import QuantumCircuit, Aer
+
+for backend in Aer.backends():
+    print(backend)
+    
+    
+    
+qc = QuantumCircuit(8)
+qc.measure_all()
+
+sim = Aer.get_backend('aer_simulator') 
+
+result = sim.run(qc_output).result()
+counts = result.get_counts()
+plot_histogram(counts)
+```
+
+- aer_simulator
+- aer_simulator_statevector
+- aer_simulator_density_matrix
+- aer_simulator_stabilizer
+- aer_simulator_matrix_product_state
+- aer_simulator_extended_stabilizer
+- aer_simulator_unitary
+- aer_simulator_superop
+- qasm_simulator
+- statevector_simulator
+- unitary_simulator
+- pulse_simulator
 
 <br/><br/>
 
@@ -188,7 +218,15 @@ Defined in [/circuit/quantumcircuit.py](https://github.com/Qiskit/qiskit-terra/b
 
 ## 9. Construct Visualizations --- 19%
 ### Draw a circuit
+The default backend for `QuantumCircuit.draw()` or `qiskit.visualization.circuit_drawer()` is the text backend. 
+
 ### Plot a histogram of data
+```
+from qiskit.visualization import plot_histogram
+counts = result.get_counts(circuit)
+plot_histogram(counts)
+```
+
 ### Plot a Bloch multivector
 ### Plot a Bloch vector
 ### Plot a QSphere
