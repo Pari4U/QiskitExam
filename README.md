@@ -12,24 +12,24 @@ Study notes for IBM's Quantum Computation using Qikit v0.2x Exam
     * Return the OpenQASM string for a circuit
 2. [Executing Experiments](#2-executing-experiments-----3) --- 3%
     * Execute a quantum circuit
-3. Implement BasicAer: Python-based Simulators --- 3%
+3. [Implement BasicAer: Python-based Simulators](#3-implement-basicaer-python-based-simulators-----3) --- 3%
     * Use the available simulators
-4. Implement Qasm1%
+4. [Implement Qasm](#4-implement-qasm-----1) --- 1%
     * Read a QASM file and string
-5. Compare and Contrast Quantum Information --- 10%
+5. [Compare and Contrast Quantum Information](#5-compare-and-contrast-quantum-information-----10) --- 10%
     * Use classical and quantum registers
     * Use operators
     * Measure fidelity
-6. Return the Experiment Results --- 7%
+6. [Return the Experiment Results](#6-return-the-experiment-results-----7) --- 7%
     * Return and understand the histogram data of an experiment
     * Return and understand the statevector of an experiment
     * Return and understand the unitary of an experiment
-7. Use Qiskit Tools --- 1%
+7. [Use Qiskit Tools](#7-use-qiskit-tools-----1) --- 1%
     * Monitor the status of a job instance
-8. Display and Use System Information3%
+8. [Display and Use System Information](#8-display-and-use-system-information-----3) --- 3%
     * Perform operations around the Qiskit version
     * Use information gained from %quiskit_backend_overview
-9. Construct Visualizations --- 19%
+9. [Construct Visualizations](#9-construct-visualizations-----19) --- 19%
     * Draw a circuit
     * Plot a histogram of data
     * Plot a Bloch multivector
@@ -37,7 +37,7 @@ Study notes for IBM's Quantum Computation using Qikit v0.2x Exam
     * Plot a QSphere
     * Plot a density matrix
     * Plot a gate map with error rates
-10. Access Aer Provider --- 6%
+10. [Access Aer Provider](#10-access-aer-provider-----6) --- 6%
     * Access a statevector_simulator backend
     * Access a qasm_simulator backend
     * Access a unitary_simulator backend
@@ -113,44 +113,45 @@ Defined in [/circuit/quantumcircuit.py](https://github.com/Qiskit/qiskit-terra/b
 
 
 ## 2. Executing Experiments --- 3%
-Execute a quantum circuit
+### Execute a quantum circuit
 
-Section 3: Implement BasicAer: Python-based Simulators3%
-Use the available simulators
+## 3. Implement BasicAer: Python-based Simulators --- 3%
+### Use the available simulators
 
-Section 4: Implement Qasm1%
-Read a QASM file and string
 
-Section 5: Compare and Contrast Quantum Information10%
-Use classical and quantum registers
-Use operators
-Measure fidelity
+## 4. Implement Qasm --- 1%
+### Read a QASM file and string
 
-Section 6: Return the Experiment Results7%
-Return and understand the histogram data of an experiment
-Return and understand the statevector of an experiment
-Return and understand the unitary of an experiment
+## 5. Compare and Contrast Quantum Information --- 10%
+### Use classical and quantum registers
+### Use operators
+### Measure fidelity
 
-Section 7: Use Qiskit Tools1%
-Monitor the status of a job instance
+## 6. Return the Experiment Results --- 7%
+### Return and understand the histogram data of an experiment
+### Return and understand the statevector of an experiment
+### Return and understand the unitary of an experiment
 
-Section 8: Display and Use System Information3%
-Perform operations around the Qiskit version
- Use information gained from %quiskit_backend_overview
+## 7. Use Qiskit Tools --- 1%
+### Monitor the status of a job instance
 
-Section 9: Construct Visualizations19%
-Draw a circuit
-Plot a histogram of data
-Plot a Bloch multivector
-Plot a Bloch vector
-Plot a QSphere
-Plot a density matrix
-Plot a gate map with error rates
+## 8. Display and Use System Information --- 3%
+### Perform operations around the Qiskit version
+### Use information gained from %quiskit_backend_overview
 
-Section 10: Access Aer Provider6%
-Access a statevector_simulator backend
-Access a qasm_simulator backend
-Access a unitary_simulator backend
+## 9. Construct Visualizations --- 19%
+### Draw a circuit
+### Plot a histogram of data
+### Plot a Bloch multivector
+### Plot a Bloch vector
+### Plot a QSphere
+### Plot a density matrix
+### Plot a gate map with error rates
+
+## 10. Access Aer Provider --- 6%
+### Access a statevector_simulator backend
+### Access a qasm_simulator backend
+### Access a unitary_simulator backend
 
 
 
