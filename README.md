@@ -42,9 +42,9 @@ Study notes for IBM's Quantum Computation using Qikit v0.2x Exam
     * Access a qasm_simulator backend
     * Access a unitary_simulator backend
 
+<br/><br/>
 
-
-
+---
 
 ## 1. Perform Operations on Quantum Circuits --- 47%
 Mostly defined in [/circuit/quantumcircuit.py](https://github.com/Qiskit/qiskit-terra/blob/main/qiskit/circuit/quantumcircuit.py)
@@ -58,12 +58,11 @@ Can be done explicitly (`qr = QuantumRegister(numqubits, 'name')`) or implicitly
 - [/circuit/bit.py](https://github.com/Qiskit/qiskit-terra/blob/main/qiskit/circuit/bit.py)
 
 ### Measure quantum circuits in classical registers
-`circuit.measure(qubitSpecifier, clbitSpecifier)`
+`circuit.measure(qubit, clbit)`
 
+`circuit.measure_active(inplace: bool = True)` adds measuremeant to all ACTIVE qubits.
 
-`circuit.measure_active()` adds measuremeant to all ACTIVE qubits.
-
-`circuit.measure_all()` adds measuremeant to ALL qubits.  Will add classical bits as necessary.
+`circuit.measure_all(inplace: bool = True, add_bits: bool = True)` adds measuremeant to ALL qubits.  Will add classical bits as necessary.
 
 ***NOTE*** - There is a `circuit.remove_final_measurement()` that removes all the measures and cleans up any now unused classical bits.
 
@@ -72,7 +71,8 @@ Can be done explicitly (`qr = QuantumRegister(numqubits, 'name')`) or implicitly
 ### Use single-qubit gates
 All are defined (sort of... methods are defined that import the required gate from [/library/standard_gates/](https://github.com/Qiskit/qiskit-terra/tree/main/qiskit/circuit/library/standard_gates) and appends it to the circuit) way down near the bottom of [/circuit/quantumcircuit.py](https://github.com/Qiskit/qiskit-terra/blob/main/qiskit/circuit/quantumcircuit.py)
 
-- `circuit.h(qubitSpecifier)` 
+- `circuit.h(qubit)` 
+- `circuit.ch(control_qubit, target_qubit)` --- Controlled-H
 - `circuit.x()`
 - `circuit.y()`
 - `circuit.z()`
@@ -109,35 +109,72 @@ Defined in [/circuit/quantumcircuit.py](https://github.com/Qiskit/qiskit-terra/b
 
 
 ### Return the OpenQASM string for a circuit
+`circuit.qasm(formatted: bool = False, filename: Optional[str] = None, encoding: Optional[str] = None) -> Optional[str]`
+
+ Args:
+  - formatted (bool): Return formatted Qasm string.
+  - filename (str): Save Qasm to file with name 'filename'.
+  - encoding (str): Optionally specify the encoding to use for the output file if `filename` is specified. By default this is set to the system's default encoding 
 
 
+<br/><br/>
+
+---
 
 ## 2. Executing Experiments --- 3%
 ### Execute a quantum circuit
 
+<br/><br/>
+
+---
+
 ## 3. Implement BasicAer: Python-based Simulators --- 3%
 ### Use the available simulators
+
+<br/><br/>
+
+---
 
 
 ## 4. Implement Qasm --- 1%
 ### Read a QASM file and string
+
+<br/><br/>
+
+---
 
 ## 5. Compare and Contrast Quantum Information --- 10%
 ### Use classical and quantum registers
 ### Use operators
 ### Measure fidelity
 
+<br/><br/>
+
+---
+
 ## 6. Return the Experiment Results --- 7%
 ### Return and understand the histogram data of an experiment
 ### Return and understand the statevector of an experiment
 ### Return and understand the unitary of an experiment
 
+<br/><br/>
+
+---
+
 ## 7. Use Qiskit Tools --- 1%
 ### Monitor the status of a job instance
+
+<br/><br/>
+
+---
 
 ## 8. Display and Use System Information --- 3%
 ### Perform operations around the Qiskit version
 ### Use information gained from %quiskit_backend_overview
+
+<br/><br/>
+
+---
 
 ## 9. Construct Visualizations --- 19%
 ### Draw a circuit
@@ -147,6 +184,10 @@ Defined in [/circuit/quantumcircuit.py](https://github.com/Qiskit/qiskit-terra/b
 ### Plot a QSphere
 ### Plot a density matrix
 ### Plot a gate map with error rates
+
+<br/><br/>
+
+---
 
 ## 10. Access Aer Provider --- 6%
 ### Access a statevector_simulator backend
