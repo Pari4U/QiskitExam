@@ -72,11 +72,12 @@ Can be done explicitly (`qr = QuantumRegister(numqubits, 'name')`) or implicitly
 All are defined (sort of... methods are defined that import the required gate from [/library/standard_gates/](https://github.com/Qiskit/qiskit-terra/tree/main/qiskit/circuit/library/standard_gates) and appends it to the circuit) way down near the bottom of [/circuit/quantumcircuit.py](https://github.com/Qiskit/qiskit-terra/blob/main/qiskit/circuit/quantumcircuit.py)
 
 - `circuit.h(qubit)` 
-- `circuit.ch(control_qubit, target_qubit)` --- Controlled-H
-- `circuit.x()`
+- `circuit.i(qubit)` aka  `circuit.id(qubit)`
+- `circuit.p(theta, qubit)` --- Phase gate, rotate by theta.
+- `circuit.r(theta, phi, qubit)` --- Rotation by theta around the cos(phi) + i\*sin(phi) axis in the x-y plane.
+- `circuit.x()` --- "NOT-gate", rotation by pi radians around the x-axis. Sends |0> to |1> and vice versa.
 - `circuit.y()`
 - `circuit.z()`
-- `circuit.p()`
 - `circuit.s()`
 - `circuit.sdg()`
 - `circuit.t()`
@@ -86,6 +87,15 @@ All are defined (sort of... methods are defined that import the required gate fr
 
 
 ### Use multi-qubit gates
+- `circuit.cx(control_qubit, target_qubit)` --- C-NOT
+- `circuit.ccx(control_qubit, target_qubit)` --- Toffoli
+
+
+- `circuit.ch(control_qubit, target_qubit)` --- Controlled-H
+- `circuit.cp(theta, control_qubit, target_qubit)` --- Controlled-P
+- `circuit.mcp(theta, control_qubits, target_qubit)` --- Multiply Controlled-P
+
+
 
 ### Use barrier operations
 `qc.barrier()` applies barrier to all qubits, with optional argument to specify qubit(s) to apply barrier to. 
