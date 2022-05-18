@@ -187,6 +187,17 @@ plot_histogram(counts)
 ### Use classical and quantum registers
 ### Use operators
 ### Measure fidelity
+Defined in `/quantum_info/states/measures.py`
+
+```
+from qiskit.quantum_info import state_fidelity
+
+state_fidelity(state1, state2)
+```
+
+Expects states as statevectors or density matrices.  Returns between 0 and 1, where 1 is matching states.
+
+
 
 <br/><br/>
 
