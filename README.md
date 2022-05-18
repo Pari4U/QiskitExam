@@ -228,7 +228,25 @@ plot_histogram(counts)
 ```
 
 ### Plot a Bloch multivector
+
+
+
+
 ### Plot a Bloch vector
+Defined in `/visualization/state_visualization.py`, about line 180.
+
+```
+from qiskit.visualizations import plot_bloch_vector
+
+plot_bloch_vector([0, 1, 0], title="some title")
+
+plot_bloch_vector([1, 1, 1], coord_type="spherical")
+```
+
+Expects a three element array of coordinates--by default Cartesian \(\[x, y, z]).
+
+If `coord_type="spherical"` is supplied, then expects \[\(r, theta, phi]).
+
 ### Plot a QSphere
 ### Plot a density matrix
 ### Plot a gate map with error rates
