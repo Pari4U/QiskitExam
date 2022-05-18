@@ -231,6 +231,17 @@ Expects states as statevectors or density matrices.  Returns between 0 and 1, wh
 ### Draw a circuit
 The default backend for `QuantumCircuit.draw()` or `qiskit.visualization.circuit_drawer()` is the text backend. 
 
+Valid options are:
+```
+qc.draw("text")          # ASCII art
+qc.draw("mpl")           # image rendered with matplotlib
+qc.draw("latex")         # image rendered from latex
+qc.draw("latex_source")  # raw latex source code for an image
+```
+
+Many other args, but `filename` is likely most useful other one (string for the filename to save image as...).
+
+
 ### Plot a histogram of data
 ```
 from qiskit.visualization import plot_histogram
