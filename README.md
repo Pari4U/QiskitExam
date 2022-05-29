@@ -199,6 +199,9 @@ Expects states as statevectors or density matrices.  Returns between 0 and 1, wh
 
 
 
+`average_gate_fidelity()` and `process_fidelity()` is for channels and operators.
+
+
 <br/><br/>
 
 ---
